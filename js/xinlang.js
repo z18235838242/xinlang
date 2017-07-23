@@ -81,6 +81,12 @@ $(function(){
 	})
 	
 	
+	$(".drop span>i").hover(function(){
+		var index=$(this).index()
+		$(this).addClass("active").siblings().removeClass("active")
+		$(this).parents(".comTitle").siblings(".tabs").find(".comList").eq(index).removeClass("hide").siblings(".comList").addClass("hide")
+	})
+	
 })
 
 
